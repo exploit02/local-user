@@ -24,6 +24,8 @@ function SignUp(props) {
         if (success) {
             authService.signup(user);
             checkLogin();
+        } else {
+            alert(JSON.stringify(errors));
         }
     };
     const checkLogin = () => {
